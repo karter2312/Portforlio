@@ -1,70 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Your Name</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Tafadzwa Mukata" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Tafadzwa Mukata">Tafadzwa Mukata</h1>
+          <p class="title">Cybersecurity Analyst - Student</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:tafadzwa.mukata@mds.ac.nz" class="contact-link">tafadzwa.mukata@mds.ac.nz</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:021xxxxxxxxx" class="contact-link">021xxxxxxxxx</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Auckland, New Zealand</address>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="#about" class="navbar-link active">About</a></li>
+          <li><a href="#code-samples" class="navbar-link">Code Samples</a></li>
+          <li><a href="#portfolio" class="navbar-link">Reflection</a></li>
+        </ul>
+      </nav>
+
+      <!-- ABOUT -->
+      <article id="about" class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            I am currently pursuing a Bachelor's degree in Information Technology with a focus on Cybersecurity. Through my studies, I have gained a deep understanding of network security, threat intelligence, and incident response, along with practical experience using industry-standard tools.
+          </p>
+          <p>
+            Key areas of study include Microservices Architecture (MSA106), Cybersecurity Principles (CBS131), Data and Networking (MIS102), and Introduction to Cloud Computing (ICC104). My passion lies in problem-solving, learning new technologies, and contributing to a safer digital environment.
+          </p>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="education icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Bachelor's in IT</h4>
+                <p class="service-item-text">Building fundamental skills in Cybersecurity and IT systems.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="web development icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Programming Proficiency</h4>
+                <p class="service-item-text">Experienced in Python, React, and C++ with a focus on secure coding practices.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="app icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cryptographic Systems</h4>
+                <p class="service-item-text">Implemented encryption algorithms such as RSA, Diffie-Hellman, and SSL/SSH.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- SUBJECTS -->
+        <section class="testimonials">
+          <h3 class="h3 testimonials-title">Subjects I've Studied</h3>
+          <ul class="testimonials-list has-scrollbar">
+            <li class="testimonials-item">
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title">MSA106 - Microservices Architecture</h4>
+                <p>Learned how to design scalable, modular applications using microservices.</p>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title">CBS131 - Cybersecurity Principles</h4>
+                <p>Studied foundational concepts in network security, ethical hacking, and risk management.</p>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title">MIS102 - Data and Networking</h4>
+                <p>Explored concepts like data management and network communication protocols, including OSI/TCP-IP models.</p>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title">ICC104 - Introduction to Cloud Computing</h4>
+                <p>Learned about cloud infrastructure, virtualization, and security in cloud environments.</p>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title">Cryptography</h4>
+                <p>Implemented block ciphers, RSA, and Diffie-Hellman key exchange to secure communications using tools like OpenSSL.</p>
+              </div>
+            </li>
+            <li class="testimonials-item">
+              <div class="content-card">
+                <h4 class="h4 testimonials-item-title">Governance, Risk, and Compliance (GRC)</h4>
+                <p>Applied cybersecurity frameworks and compliance standards to evaluate and manage security risks in IT environments.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+<!-- CODE SAMPLES SECTION -->
+<article id="code-samples" class="code-samples" data-page="code-samples">
+  <header>
+    <h2 class="h2 article-title">Code Samples</h2>
+  </header>
+  <section class="code-samples-content" style="color: white;">
+    <h3 class="h3">Featured Code</h3>
+    <p>Below are examples of projects and code implementations that demonstrate my skills in cybersecurity and software development:</p>
+
+    <!-- Code Example 1 -->
+    <div class="code-example">
+      <h4 class="h4">Python: Caesar Cipher</h4>
+      <pre>
+# Encrypts and decrypts messages using Caesar Cipher
+mode = input("Would you like to encrypt or decrypt? (encrypt or decrypt) ")
+message = input("Please enter your message: ")
+key = int(input("What is your secret key? (numbers only) "))
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+transformed_text = ""
+if mode == "decrypt":
+    key = -key
+
+for char in message:
+    if char != ' ':
+        transformed_text += alphabet[(alphabet.index(char) + key) % 26]
+    else:
+        transformed_text += " "
+print(transformed_text)
+      </pre>
+    </div>
+
+    <!-- Code Example 2 -->
+    <div class="code-example">
+      <h4 class="h4">Flask: NBA Matchup API</h4>
+      <pre>
+#This Flask application provides an API endpoint for retrieving basketball player statistics.
+ It demonstrates the creation of RESTful APIs using Flask, suitable for serving JSON responses to clients.# 
+from flask import Flask, jsonify, request
+import pandas as pd
+
+app = Flask(__name__)
+
+@app.route('/api/stats', methods=['GET'])
+def get_player_stats():
+    """Endpoint to get player stats"""
+    return jsonify({"message": "Sample data here"})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+      </pre>
+    </div>
+
+    <!-- Code Example 3 -->
+    <div class="code-example">
+      <h4 class="h4">React: NBA Stats App</h4>
+      <pre>
+#This React application is a single-page application (SPA) for NBA stats. 
+It features a simple navigation menu to switch between the homepage and a player stats page using React Router#	  
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#work">Work Examples</a></li>
-                <li><a href="#webapp">Web App</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+          <Link to="/">Home</Link>
+          <Link to="/players">Player Stats</Link>
         </nav>
-    </header>
+        <Routes>
+          <Route path="/" element={<h1>Welcome to NBA Stats</h1>} />
+          <Route path="/players" element={<h2>Player Stats Page</h2>} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
-    <section id="home">
-        <div class="intro">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Hi, I'm [Your Name], a Software Engineering student specializing in Artificial Intelligence. Welcome to my portfolio where I showcase my projects and professional experience.</p>
-            <img src="your-photo.jpg" alt="Your Photo">
-        </div>
-    </section>
+export default App;
+      </pre>
+    </div>
 
-    <section id="work">
-        <h2>Work Examples</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Cybersecurity Analysis</h3>
-                <p>A detailed cybersecurity analysis project involving the use of tools like Darktrace and CrowdStrike to identify potential threats.</p>
-            </div>
-            <div class="project">
-                <h3>Cloud Computing Case Studies</h3>
-                <p>Analysis of cloud adoption strategies used by Netflix (AWS) and Tiger Brokers (Alibaba Cloud). This project involved understanding deployment models and overcoming challenges.</p>
-            </div>
-            <div class="project">
-                <h3>Networking with Packet Tracer</h3>
-                <p>Designed and configured a network using Cisco Packet Tracer for an enterprise-level architecture, including router setup, VPN, and static routing.</p>
-            </div>
-        </div>
-    </section>
+    <!-- Code Example 4 -->
+    <div class="code-example">
+      <h4 class="h4">Flask App: Example with Celtics Data</h4>
+      <pre>
+#This Flask application provides an API endpoint specifically for the Boston Celtics.
+ It returns JSON data about the team, including the coach and a list of key players#	  
+from flask import Flask, jsonify
 
-    <section id="webapp">
-        <h2>Boston Celtics Player Stats Web App</h2>
-        <div class="webapp-project">
-            <p>This web application showcases the player statistics for the Boston Celtics. Built using React for the frontend, Express for the backend, and Flask for machine learning predictions, it allows users to view player stats and make performance predictions. The backend also loads player data dynamically from CSV files, providing real-time updates.</p>
-            <ul>
-                <li><strong>Technologies Used:</strong> React, Express, Flask, Python, Node.js, CSS</li>
-                <li><strong>Features:</strong> Player statistics viewing, team leaders identification, performance prediction using machine learning</li>
-            </ul>
-            <img src="webapp-screenshot.jpg" alt="Boston Celtics Web App Screenshot">
-        </div>
-    </section>
+app = Flask(__name__)
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">Your LinkedIn Profile</a></p>
-    </section>
+@app.route('/celtics', methods=['GET'])
+def get_celtics():
+    """Endpoint for Celtics data"""
+    data = {"team": "Celtics", "coach": "Joe Mazzulla", "players": ["Tatum", "Brown", "Smart"]}
+    return jsonify(data)
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+if __name__ == '__main__':
+    app.run(debug=True)
+      </pre>
+    </div>
+
+    <!-- Code Example 5 -->
+    <div class="code-example">
+      <h4 class="h4">React App: Dynamic Routing</h4>
+      <pre>
+#This React application demonstrates dynamic routing using React Router.
+ It features a basic navigation menu and dynamically renders pages based on the route#	  
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+
+const Home = () => <h1>Welcome to the App</h1>;
+const About = () => <h2>About the App</h2>;
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+      </pre>
+    </div>
+  </section>
+</article>
+
+
+      <!-- Feedback -->
+      <article id="portfolio" class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Reflection</h2>
+        </header>
+        <section class="portfolio-content">
+          <p>This year has been a significant journey of growth, both academically and personally, marked by challenges and achievements. Toward the end of the semester, I faced one of the most emotionally taxing periods of my life with the loss of a loved one. It was a moment that tested my resilience and nearly led me to withdraw from university entirely. However, the thought of my 8-month-old son became my anchor, providing the hope and encouragement I needed to persevere. Reflecting on the support and dedication of my lecturers, I am deeply grateful for their guidance and the quality of the semester's learning experience. Their commitment, coupled with comprehensive lecture notes, made it possible to revisit and consolidate concepts, aiding my journey through a transformative academic year.
+		  <p>
+		  <p>
+           <p> Adapting to coding at the age of 35 with no prior experience was one of the most formidable challenges I faced. As a completely new skill, it required immense effort to grasp foundational principles and practical applications. Despite the initial difficulty, I leveraged my background in the cybersecurity industry, which improved my ability to contextualize learning and approach problem-solving. I also invested in external resources such as YouTube channels and LinkedIn Learning to enhance my coding skills. Among all the subjects, "Introduction to Cybersecurity Principles" stood out as my favorite, as it aligned closely with my hands-on professional experience. In contrast, "Microservices Architecture" was the most challenging yet rewarding course. The intensive weekly hands-on sessions laid the groundwork for me to explore areas I was unfamiliar with and reinforced the importance of diligence and research in mastering new concepts.<p>
+           <p>
+		   <p>
+            <p>Looking ahead, I am eager for the opportunities and challenges of the next academic year in 2025, where I hope to build on the foundational knowledge gained this year. While I discovered that data analytics is not a path I enjoy—despite my love for sports and attempts to integrate basketball statistics—it was a valuable realization that clarified my academic interests. This year taught me that growth often emerges from discomfort, and I am excited to continue refining my skills, embracing new challenges, and broadening my understanding of the cybersecurity and IT domains. With renewed focus and determination, I look forward to translating these experiences into future successes..</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <!-- JavaScript for navigation -->
+  <script>
+    const navbarLinks = document.querySelectorAll('.navbar-link');
+    const sections = document.querySelectorAll('article');
+
+    navbarLinks.forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        navbarLinks.forEach(nav => nav.classList.remove('active'));
+        sections.forEach(section => section.classList.remove('active'));
+        this.classList.add('active');
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+  </script>
+
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
